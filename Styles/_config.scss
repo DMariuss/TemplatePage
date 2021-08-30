@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+  // font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: inherit;
+}
+$colors: (
+  bkg_nav: #2265a9,
+  bkg_s1_title: #2265a9,
+  bkg_ban: #31894d,
+  bkg_s1: #bedaff,
+  bkg_ft: #2265a9,
+  bkg_art_s2: #e8e8e8,
+  bkg_img: #28282b,
+  bkg_aside: #f6f6f6,
+  color_border_imgs: #fff,
+  color_outline_imgs: #092976,
+  color_white: #fff,
+  txt_white: #fff,
+  txt_dark: #000,
+  txt_imgs: rgba(255, 255, 255, 0.829),
+  txt_art: #000,
+  txt_links: #092976,
+  txt_links_hover: #31894d,
+  txt_aside_h2: #949494,
+  txt_s3: rgba(0, 0, 0, 0.623),
+);
+
+$margins_paddings: (
+  margin_navLinks_and_s4: 10px,
+  margin_items_s2_s3_sm: 10px,
+  margin_items_s2_s3_lg: 20px,
+  // margin_items_s3: 0px
+  // margin_items_s4: 10px,
+  padding_items_s2: 25px,
+  padding_wrapper_sm: 10px,
+  padding_wrapper_md: 25px,
+);
+
+@function set_mg_pd($key) {
+  @return map-get($map: $margins_paddings, $key: $key);
+}
+@function set_color($key) {
+  @return map-get($colors, $key);
+}
+
+@mixin media_sm {
+  @media screen and (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin media_md {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin media_lg {
+  @media screen and (min-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ------------------------------------ Mixinul pentru bordura personalizata
+
+@mixin border_effect {
+  content: "-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅-⋅";
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.3em;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(50%);
+  @content;
+}
+
+// -----------------------------------  Animatii
+
+@keyframes move_right_effect {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}

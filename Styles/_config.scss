@@ -11,7 +11,10 @@ html {
   text-decoration: none;
   list-style: none;
   box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent; /* 🢣 to remove blue highlight when on mobile */
 }
+
+// variables
 $colors: (
   bkg_nav: #2265a9,
   bkg_s1_title: #2265a9,

@@ -13,6 +13,8 @@ html {
   list-style: none;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  /* 🢣 to remove blue highlight when on mobile */
 }
 
 @-webkit-keyframes move_right_effect {
@@ -55,7 +57,7 @@ html {
 }
 
 .wrapper {
-  max-width: 1440px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -302,7 +304,7 @@ h4 {
   .section_1__banner {
     left: 20%;
     top: 35%;
-    font-size: Clamp(5rem, 8vw, 8rem);
+    font-size: 5.2rem;
     -webkit-transform: scale(1.1, 2.3) rotateZ(-9deg) rotateX(17deg) rotateY(18deg) skewX(40deg);
             transform: scale(1.1, 2.3) rotateZ(-9deg) rotateX(17deg) rotateY(18deg) skewX(40deg);
   }

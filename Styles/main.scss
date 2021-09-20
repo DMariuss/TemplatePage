@@ -14,12 +14,12 @@
 
 .wrapper {
   // padding: 0 set_mg_pd(padding_wrapper_sm);      // padding-ul pe dispozitivele mnobile este mai mic --> 10px
-  max-width: 1440px;
-  margin: 0 auto;
+  // max-width: 1440px;
+  // margin: 0 auto;
 
   //**********************************
-  //   max-width: 1000px; //pentru perfectiune :))
-  //   margin: 0 auto;
+  max-width: 1000px; //pentru perfectiune :))
+  margin: 0 auto;
   //**********************************
 
   @include media_md {
@@ -246,7 +246,8 @@ h4 {
     @include media_lg {
       left: 20%;
       top: 35%;
-      font-size: Clamp(5rem, 8vw, 8rem);
+      // font-size: Clamp(5rem, 8vw, 8rem);
+      font-size: 5.2rem;
       transform: scale(1.1, 2.3) rotateZ(-9deg) rotateX(17deg) rotateY(18deg)
         skewX(40deg);
     }
